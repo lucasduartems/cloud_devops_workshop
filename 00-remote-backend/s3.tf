@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "this" {
-  bucket = var.remote_backend_s3_bucket_name
+  bucket        = var.remote_backend_s3_bucket_name
+  force_destroy = true
 
   tags = {
     Name = var.remote_backend_s3_bucket_name
