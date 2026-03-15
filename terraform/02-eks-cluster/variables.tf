@@ -16,3 +16,11 @@ variable "tags" {
     Project     = "workshop"
   }
 }
+
+variable "ecr_repositories" {
+  type = list(string)
+  default = [
+    "workshop/production/frontend",
+    "workshop/production/backend"
+  ]
+}
